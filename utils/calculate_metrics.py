@@ -12,6 +12,7 @@ def get_country_investments(input_df, country=None):
 def get_country_investments_by_year(data_dir, country=None, verbose=False):
     investments = []
     for file in os.listdir(data_dir):
+        if 'data_here' in file: continue
         year = int(file.split('_')[1])
         file_path = os.path.join(data_dir, file)
         if verbose: print(file_path, year)
@@ -33,6 +34,7 @@ def get_country_investments_by_year_multiprocess(data_dir, country=None, verbose
     investments = []
     files = []
     for file in os.listdir(data_dir):
+        if 'data_here' in file: continue
         file_path = os.path.join(data_dir, file)
         files.append(file_path)
         if verbose: print(file_path, year)
@@ -54,6 +56,7 @@ def get_countries_by_year_multiprocess(data_dir, verbose=False):
     countries = []
     files = []
     for file in os.listdir(data_dir):
+        if 'data_here' in file: continue
         file_path = os.path.join(data_dir, file)
         files.append(file_path)
         if verbose: print(file_path, year)
