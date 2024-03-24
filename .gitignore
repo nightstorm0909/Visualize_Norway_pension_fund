@@ -1,6 +1,3 @@
-data/equities
-data/fixed_income
-data/infrastructure
-data/real_estate
 .ipynb_checkpoints
 *.pyc
+*.xlsx
